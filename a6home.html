@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Justin Hack — Software Developer</title>
+  <meta name="description" content="Portfolio of Justin Hack: projects, skills, resume, and contact." />
+  <meta name="theme-color" content="#FFD700" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Justin Hack — Software Developer" />
+  <meta property="og:description" content="Projects, skills, resume, contact." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.xml" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- subtle noise texture -->
+  <canvas id="noise" class="noise" aria-hidden="true"></canvas>
+
+  <!-- Decorative background -->
+  <div class="bg-deco" aria-hidden="true"></div>
+  <!-- ornamental top divider -->
+  <div class="divider top" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,60 C300,0 900,0 1200,60 L1200,0 L0,0 Z" />
+    </svg>
+  </div>
+
+  <!-- Assignment disclaimer -->
+  <div class="notice" role="note">
+    This site was created temporarily for an assignment. My primary portfolio is at
+    <a href="#" rel="nofollow noopener">justinhack.dev</a> (placeholder).
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <img class="logo" src="assets/logo.xml" alt="JH monogram" />
+        <span class="brand-name">Justin Hack</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div id="navMenu" class="nav-menu">
+          <a href="#summary">Summary</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark/light">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Summary -->
+    <section id="summary" class="section section-hero">
+      <div class="container grid-hero alt-grid">
+        <aside class="hero-card" aria-label="Quick profile">
+          <img src="assets/avatar.jpg" alt="Portrait" class="avatar shadow-tilt" />
+          <ul>
+            <li><span class="dot"></span> Open to internships & junior roles</li>
+            <li><span class="dot"></span> Building RateScape v2</li>
+            <li><span class="dot"></span> Learning cloud & DevOps</li>
+          </ul>
+        </aside>
+        <div>
+          <h1 class="display">Justin Hack</h1>
+          <p class="kicker">Software Developer · Hamilton, ON</p>
+          <p class="lead">
+            I build reliable, user-friendly apps with TypeScript, React/React Native, and Node.js.
+            I care about clean architecture, performance, and helpful UX. (Student ID: 000834567)
+          </p>
+          <div class="now">
+            <span class="blink"></span>
+            <em>Now:</em> polishing camera UI & friends system for <strong>RateScape</strong>.
+          </div>
+          <div class="cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+            <button class="btn btn-outline" data-open-cmdk>⌘K / Ctrl+K</button>
+          </div>
+          <div class="skill-marquee" aria-hidden="true">
+            <div class="track">
+              <span>TypeScript</span><span>React</span><span>React Native</span><span>Node.js</span><span>SQL</span><span>Supabase</span><span>Firebase</span><span>Testing</span><span>UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="bar"></span>Education</h2>
+        <ol class="timeline" aria-label="Education timeline">
+          <li class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <header>
+                <h3>Mohawk College — Software Development</h3>
+                <span class="meta">Hamilton, ON · 2024–2026 (expected)</span>
+              </header>
+              <p>Relevant coursework: Data Structures & Algorithms, Android Dev, SQL/Databases, Cloud (Azure), Web & Mobile Development.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="bar"></span>Skills</h2>
+        <div class="chips" role="list">
+          <span class="chip" role="listitem">TypeScript</span>
+          <span class="chip" role="listitem">React</span>
+          <span class="chip" role="listitem">React Native (Expo)</span>
+          <span class="chip" role="listitem">Node.js</span>
+          <span class="chip" role="listitem">Express</span>
+          <span class="chip" role="listitem">SQL (Postgres, SQLite)</span>
+          <span class="chip" role="listitem">Supabase</span>
+          <span class="chip" role="listitem">Firebase</span>
+          <span class="chip" role="listitem">Git & GitHub</span>
+          <span class="chip" role="listitem">REST APIs</span>
+          <span class="chip" role="listitem">Unit Testing</span>
+          <span class="chip" role="listitem">UI/UX basics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="bar"></span>Projects</h2>
+        <div class="cards cards-alt">
+          <article class="card reveal numbered" data-num="01">
+            <div class="card-head">
+              <h3>RateScape (GeoPhoto Explorer)</h3>
+              <span class="tag">React Native · Supabase</span>
+            </div>
+            <p>Location-based photo sharing with camera integration, geotagging, friends & messaging, and gallery views. Expo + Supabase Auth/Storage.</p>
+            <ul class="bullets">
+              <li>Camera UI, previews, gallery saves</li>
+              <li>Friends & messaging (real-time)</li>
+              <li>Image proximity search & collections</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-sm disabled" href="#" aria-disabled="true">Live Demo</a>
+              <a class="btn btn-sm btn-outline disabled" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+
+          <article class="card reveal numbered" data-num="02">
+            <div class="card-head">
+              <h3>NodeJS Multipage MVC</h3>
+              <span class="tag">Node · Express · Mustache</span>
+            </div>
+            <p>Session-enabled article CMS with login/signup, editor-only controls, request logging, and database-backed auth. Middleware & access control.</p>
+            <ul class="bullets">
+              <li>Role-based access (Editors page)</li>
+              <li>SQLite persistence</li>
+              <li>Structured request logs</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-sm disabled" href="#" aria-disabled="true">Live Demo</a>
+              <a class="btn btn-sm btn-outline disabled" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+
+          <article class="card reveal numbered" data-num="03">
+            <div class="card-head">
+              <h3>iOS Converter (Swift)</h3>
+              <span class="tag">Swift · UIKit</span>
+            </div>
+            <p>Three-tab unit converter with polished UI, gesture-dismiss keyboard, and documentation-ready comments. Clean MVC.</p>
+            <ul class="bullets">
+              <li>Accurate conversions + tests</li>
+              <li>Clean storyboards</li>
+              <li>Well-commented for grading</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-sm disabled" href="#" aria-disabled="true">Live Demo</a>
+              <a class="btn btn-sm btn-outline disabled" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="bar"></span>Resume</h2>
+        <p>You can download my current resume below. (PDF)</p>
+        <a class="btn" href="assets/Justin_Hack_Resume.pdf" download>Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="bar"></span>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="muted">The quickest ways to reach me:</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:justin@hack.com">justin@hack.com</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/justinhack" target="_blank" rel="noopener">github.com/justinhack</a></li>
+            </ul>
+          </div>
+          <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="_replyto" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+            <p class="muted tiny">This form uses a third-party service (Formspree). Replace the action URL with your own or use mailto:.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Command Palette -->
+    <dialog id="cmdk" class="cmdk">
+      <form method="dialog" class="cmdk-body" role="search">
+        <input type="text" id="cmdInput" placeholder="Type a command… (e.g., ‘projects’, ‘contact’, ‘resume’)" autocomplete="off" />
+        <ul class="cmdk-list" role="listbox">
+          <li data-jump="#projects">Open Projects</li>
+          <li data-jump="#skills">Go to Skills</li>
+          <li data-jump="#education">Go to Education</li>
+          <li data-jump="#resume">Download Resume</li>
+          <li data-jump="#contact">Open Contact</li>
+        </ul>
+        <div class="cmdk-hint">Press Esc to close</div>
+      </form>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Justin Hack · Built for an academic assignment · Student ID: 000834567</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
